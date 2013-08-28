@@ -22,7 +22,7 @@ public class Caminhao {
 				"\nTamanho do Tanque: "+TANQUE+
 				"\nPosição no Mapa: "+posicao+
 				"\nQuantidade de Combustivel: "+combustivel+
-				"\nQuantidade de Combustiveis Nessa Posição: "+mapa[combustivel];
+				"\nQuantidade de Combustiveis Nessa Posição: "+mapa[posicao];
 		return saida;
 	}
 	public void avancar(){
@@ -31,7 +31,7 @@ public class Caminhao {
 			combustivel--;
 			posicao++;
 			if(posicao == TAMANHO-1){
-				System.out.println("Você Venceu o jogo Parabens S2.");
+				System.out.println("Você Venceu o jogo Parabens.");
 				System.exit(0);
 			}
 		}else if(posicao == 0){
@@ -77,16 +77,19 @@ public class Caminhao {
 	}
 	public void descarregar(){
 		if(posicao == 0){
-
 			System.out.println("Você está no inicio do Mapa não pode descarregar");
-		}else if(mapa[posicao] == TANQUE){
-
+		}else if((mapa[posicao] == TANQUE)&&(combustivel > 0)){
+			mapa[posicao] = 6;
 			System.out.println("Está posição ja possui 6 combustiveis.");
-		}else if(mapa[posicao] < TANQUE){
+		}else if((mapa[posicao] < TANQUE)&&(combustivel > 0)){
 
 			System.out.println("Você descarregou.");
 			mapa[posicao]++;
 			combustivel --;
+		}else{
+			
+			System.out.println("Você não possui combustiveis suficientes para descarregar.");
+			
 		}
 	}
 
