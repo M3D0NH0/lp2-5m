@@ -66,7 +66,7 @@ public class Caminhao {
 	public void carregar(){
 		if(posicao == 0){
 			System.out.println("Você reabasteceu.");
-			combustivel = 6;
+			combustivel = TANQUE;
 		}else if(mapa[posicao] > 0){
 			System.out.println("Você reabasteceu.");
 			combustivel++;
@@ -79,8 +79,8 @@ public class Caminhao {
 		if(posicao == 0){
 			System.out.println("Você está no inicio do Mapa não pode descarregar");
 		}else if((mapa[posicao] == TANQUE)&&(combustivel > 0)){
-			mapa[posicao] = 6;
-			System.out.println("Está posição ja possui 6 combustiveis.");
+			mapa[posicao] = TANQUE;
+			System.out.println("Está posição ja possui "+TANQUE+" combustiveis.");
 		}else if((mapa[posicao] < TANQUE)&&(combustivel > 0)){
 
 			System.out.println("Você descarregou.");
