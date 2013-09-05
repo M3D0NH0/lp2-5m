@@ -1,4 +1,4 @@
-package Exercicio2;
+
 import java.io.Console;
 import java.io.IOException;
 
@@ -14,10 +14,13 @@ public class Login {
 		}
 		
 		out.println("Username: ");
-		
+		String username = new String(c.readLine());
 		
 		out.println("Password: ");
+		String senha = new String(c.readPassword());
 		
+		out.println("Username: "+username);
+		out.println("Senha: "+senha);
 		
 	}
 }
