@@ -1,8 +1,6 @@
+public class aaa {
 	
-	public Class HelloWorld{
-
-	public Class void main(String args []){
-	
-	System.ou.println("Hello World");
+	public static void main(String[] args) {
+		System.out.println("Hello World");
 	}
-	}
+}
