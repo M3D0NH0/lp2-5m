@@ -42,7 +42,8 @@ public class Nodo {
 		
 		saida += "\nPosicao do Nodo : " + getPosicao()+
 				 "\nPosicao da Celula : " + celula.getPosicao()+
-				 "\nEquacao Celula : " + celula.getEquacao();
+				 "\nEquacao Celula : " + celula.getEquacao() +
+				 "\n";
 				
 		return saida;
 	}

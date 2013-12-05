@@ -16,26 +16,21 @@ public class Lista {
 	
 	public void criaNodo(Celula celula, String posicao){
 		
-		Nodo nodo1;
-
-		nodo1 = new Nodo(celula,posicao);
-		nodoAux = nodo;
+		Nodo nodo1 = new Nodo(celula,posicao);
 		
-		if(nodo.getProximo() == null){
+		if(nodo == null){
+			nodo = nodo1;
+		} else if(nodo.getProximo() == null){
 			nodo.setProximo(nodo1);
-		}
-		else{
-			Nodo nodoAux2 = nodo.getProximo();
-			
-			while(nodoAux2.getProximo() != null){
+		} else {
+			nodoAux = nodo;
+			while(nodoAux.getProximo() != null){
 				
-				nodoAux = nodoAux2.getProximo();
-				
-				nodoAux2 = nodoAux.getProximo();
+				nodoAux = nodoAux.getProximo();
 				
 			}
 			
-			this.nodo.setProximo(nodo1);
+			this.nodoAux.setProximo(nodo1);
 		}
 		//nodo = NodoAux;
 		//this.nodo.setProximo(nodo1);
@@ -64,8 +59,7 @@ public class Lista {
 		
 		saida += "\nLista: "+
 				"\nPosicao da Lista : " + getPosicao()+
-				nodo.toString()+
-				"\n";
+				nodo.toString();
 		if(nodo.getProximo() == null){
 
 		}else{
