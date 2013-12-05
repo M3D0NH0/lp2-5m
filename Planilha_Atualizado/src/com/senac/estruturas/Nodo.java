@@ -1,4 +1,4 @@
-package com.senac.estruturas;
+package app;
 
 public class Nodo {
 	private Nodo prox;
@@ -10,6 +10,16 @@ public class Nodo {
 		this.posicao = posicao;
 	}
 	
+	public Nodo(){
+		
+	}
+	
+	public void criaCelula(String posicao, String equacao){
+		Celula celula1;
+		celula1 = new Celula(posicao, equacao);
+		this.celula.setProximo(celula1);
+		
+	}
 	
 	public Nodo getProximo(){
 		return this.prox;
@@ -29,8 +39,10 @@ public class Nodo {
 	
 	public String toString(){
 		String saida="";
-		saida += "Equacao Celula : " + celula.getEquacao()+
-				"\nSua Posicao : " + getPosicao();
+		
+		saida += "\nPosicao do Nodo : " + getPosicao()+
+				 "\nPosicao da Celula : " + celula.getPosicao()+
+				 "\nEquacao Celula : " + celula.getEquacao();
 				
 		return saida;
 	}
